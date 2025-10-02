@@ -66,11 +66,11 @@ router.get(
   "/",
   authenticateApiKey,
   validate({
-    query: {
+    query: Joi.object({
       page: Joi.number().integer().min(1).default(1),
       limit: Joi.number().integer().min(1).max(100).default(50),
       search: Joi.string().min(1).max(100).optional(),
-    },
+    }),
   }),
   groupController.getGroups
 );
@@ -112,11 +112,11 @@ router.post(
   "/",
   authenticateApiKey,
   validate({
-    body: {
+    body: Joi.object({
       name: commonSchemas.groupName,
       participants: commonSchemas.participants,
       description: commonSchemas.groupDescription,
-    },
+    }),
   }),
   groupController.createGroup
 );
@@ -165,9 +165,9 @@ router.post(
   "/join",
   authenticateApiKey,
   validate({
-    body: {
+    body: Joi.object({
       inviteCode: commonSchemas.inviteCode,
-    },
+    }),
   }),
   groupController.joinGroup
 );
@@ -207,9 +207,9 @@ router.get(
   "/:groupId",
   authenticateApiKey,
   validate({
-    params: {
+    params: Joi.object({
       groupId: commonSchemas.groupId,
-    },
+    }),
   }),
   groupController.getGroup
 );
@@ -251,9 +251,9 @@ router.post(
   "/:groupId/invite-link",
   authenticateApiKey,
   validate({
-    params: {
+    params: Joi.object({
       groupId: commonSchemas.groupId,
-    },
+    }),
   }),
   groupController.getInviteLink
 );
@@ -289,12 +289,12 @@ router.post(
   "/:groupId/participants/add",
   authenticateApiKey,
   validate({
-    params: {
+    params: Joi.object({
       groupId: commonSchemas.groupId,
-    },
-    body: {
+    }),
+    body: Joi.object({
       participants: commonSchemas.participants,
-    },
+    }),
   }),
   groupController.addParticipants
 );
@@ -330,12 +330,12 @@ router.post(
   "/:groupId/participants/remove",
   authenticateApiKey,
   validate({
-    params: {
+    params: Joi.object({
       groupId: commonSchemas.groupId,
-    },
-    body: {
+    }),
+    body: Joi.object({
       participants: commonSchemas.participants,
-    },
+    }),
   }),
   groupController.removeParticipants
 );
@@ -371,12 +371,12 @@ router.post(
   "/:groupId/participants/promote",
   authenticateApiKey,
   validate({
-    params: {
+    params: Joi.object({
       groupId: commonSchemas.groupId,
-    },
-    body: {
+    }),
+    body: Joi.object({
       participants: commonSchemas.participants,
-    },
+    }),
   }),
   groupController.promoteParticipants
 );
@@ -412,12 +412,12 @@ router.post(
   "/:groupId/participants/demote",
   authenticateApiKey,
   validate({
-    params: {
+    params: Joi.object({
       groupId: commonSchemas.groupId,
-    },
-    body: {
+    }),
+    body: Joi.object({
       participants: commonSchemas.participants,
-    },
+    }),
   }),
   groupController.demoteParticipants
 );
@@ -447,9 +447,9 @@ router.post(
   "/:groupId/leave",
   authenticateApiKey,
   validate({
-    params: {
+    params: Joi.object({
       groupId: commonSchemas.groupId,
-    },
+    }),
   }),
   groupController.leaveGroup
 );
@@ -493,12 +493,12 @@ router.put(
   "/:groupId/name",
   authenticateApiKey,
   validate({
-    params: {
+    params: Joi.object({
       groupId: commonSchemas.groupId,
-    },
-    body: {
+    }),
+    body: Joi.object({
       name: commonSchemas.groupName,
-    },
+    }),
   }),
   groupController.updateGroupName
 );
@@ -538,12 +538,12 @@ router.put(
   "/:groupId/description",
   authenticateApiKey,
   validate({
-    params: {
+    params: Joi.object({
       groupId: commonSchemas.groupId,
-    },
-    body: {
+    }),
+    body: Joi.object({
       description: commonSchemas.groupDescription,
-    },
+    }),
   }),
   groupController.updateGroupDescription
 );
@@ -583,12 +583,12 @@ router.post(
   "/:groupId/settings/messages-admins-only",
   authenticateApiKey,
   validate({
-    params: {
+    params: Joi.object({
       groupId: commonSchemas.groupId,
-    },
-    body: {
+    }),
+    body: Joi.object({
       adminsOnly: Joi.boolean().optional(),
-    },
+    }),
   }),
   groupController.setMessagesAdminsOnly
 );
@@ -628,12 +628,12 @@ router.post(
   "/:groupId/settings/info-admins-only",
   authenticateApiKey,
   validate({
-    params: {
+    params: Joi.object({
       groupId: commonSchemas.groupId,
-    },
-    body: {
+    }),
+    body: Joi.object({
       adminsOnly: Joi.boolean().optional(),
-    },
+    }),
   }),
   groupController.setInfoAdminsOnly
 );
@@ -673,12 +673,12 @@ router.post(
   "/:groupId/settings/add-members-admins-only",
   authenticateApiKey,
   validate({
-    params: {
+    params: Joi.object({
       groupId: commonSchemas.groupId,
-    },
-    body: {
+    }),
+    body: Joi.object({
       adminsOnly: Joi.boolean().optional(),
-    },
+    }),
   }),
   groupController.setAddMembersAdminsOnly
 );

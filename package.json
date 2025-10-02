@@ -1,5 +1,5 @@
 {
-  "name": "MariFlow - API",
+  "name": "mariflow-api",
   "version": "1.0.0",
   "description": "MariFlow - API REST para WhatsApp usando whatsapp-web.js",
   "main": "dist/index.js",
@@ -13,7 +13,14 @@
     "lint": "eslint src/**/*.ts",
     "lint:fix": "eslint src/**/*.ts --fix",
     "clean": "rimraf dist",
-    "prebuild": "yarn clean"
+    "prebuild": "yarn clean",
+    "docker:build": "docker build -t mariflow-api .",
+    "docker:run": "docker run -p 3000:3000 --env-file .env mariflow-api",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down",
+    "docker:logs": "docker-compose logs -f",
+    "docker:restart": "docker-compose restart",
+    "docker:setup": "copy env.docker.example .env && docker-compose up -d --build"
   },
   "keywords": [
     "whatsapp",

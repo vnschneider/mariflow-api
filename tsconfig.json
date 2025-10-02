@@ -31,6 +31,7 @@
       "@/utils/*": ["src/utils/*"],
       "@/config/*": ["src/config/*"]
     },
+    "rootDirs": ["./src"],
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true
