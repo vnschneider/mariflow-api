@@ -1,6 +1,8 @@
-# WhatsApp API - Zap API Venom
+# MariFlow API
 
 Uma API REST completa para integração com WhatsApp usando a biblioteca `whatsapp-web.js`. Desenvolvida com TypeScript, Express.js e documentação Swagger.
+
+**Desenvolvido por Vinícius Schneider** 🚀
 
 ## 🚀 Características
 
@@ -73,8 +75,8 @@ Uma API REST completa para integração com WhatsApp usando a biblioteca `whatsa
 1. **Clone o repositório**
 
 ```bash
-git clone https://github.com/FAB-PRO/zap-api-venom.git
-cd zap-api-venom
+git clone https://github.com/vnschneider/mariflow-api.git
+cd mariflow-api
 ```
 
 2. **Instale as dependências com Yarn**
@@ -136,8 +138,8 @@ LOG_LEVEL=info
 LOG_FILE=./logs/app.log
 
 # Configurações do Swagger
-SWAGGER_TITLE=WhatsApp API
-SWAGGER_DESCRIPTION=API REST para integração com WhatsApp
+SWAGGER_TITLE=MariFlow API
+SWAGGER_DESCRIPTION=MariFlow - API REST para integração com WhatsApp
 SWAGGER_VERSION=1.0.0
 SWAGGER_HOST=localhost:3000
 
@@ -419,7 +421,7 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 Se você encontrar algum problema ou tiver dúvidas:
 
 1. Verifique a [documentação da API](http://localhost:3000/api-docs)
-2. Consulte os [issues](https://github.com/FAB-PRO/zap-api-venom/issues)
+2. Consulte os [issues](https://github.com/vnschneider/mariflow-api/issues)
 3. Crie um novo issue se necessário
 
 ## 🙏 Agradecimentos
@@ -429,6 +431,16 @@ Se você encontrar algum problema ou tiver dúvidas:
 - [Swagger](https://swagger.io/) - Documentação da API
 - [TypeScript](https://www.typescriptlang.org/) - Linguagem de programação
 
+## 👨‍💻 Desenvolvedor
+
+**Vinícius Schneider**
+
+- 📱 **GitHub**: [@vnschneider](https://github.com/vnschneider)
+- 💼 **LinkedIn**: [vinicius-schneider](https://br.linkedin.com/in/vnschneider)
+- 📞 **Telefone**: +55 99 98103-1443
+- 🧑‍🎨 **Full Stack Mobile Developer**
+- 🏠 **Working from home**
+
 ---
 
-Desenvolvido com ❤️ por [FAB-PRO](https://github.com/FAB-PRO)
+Desenvolvido com ❤️ por [Vinícius Schneider](https://github.com/vnschneider)

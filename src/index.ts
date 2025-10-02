@@ -88,6 +88,10 @@ class App {
       res.json({
         message: "MariFlow API - WhatsApp Integration",
         version: "1.0.0",
+        author: "Vinícius Schneider",
+        github: "https://github.com/vnschneider",
+        linkedin: "https://br.linkedin.com/in/vnschneider",
+        phone: "+5599981031443",
         documentation: "/api-docs",
         health: "/health",
         timestamp: new Date().toISOString(),

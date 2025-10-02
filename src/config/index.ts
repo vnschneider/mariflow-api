@@ -50,7 +50,7 @@ const config: ServiceConfig = {
     title: process.env.SWAGGER_TITLE || "MariFlow API",
     description:
       process.env.SWAGGER_DESCRIPTION ||
-      "MariFlow - API REST para integração com WhatsApp",
+      "MariFlow - API REST para integração com WhatsApp. Desenvolvido por Vinícius Schneider (@vnschneider)",
     version: process.env.SWAGGER_VERSION || "1.0.0",
     host: process.env.SWAGGER_HOST || "localhost:3000",
     basePath: "/api/v1",

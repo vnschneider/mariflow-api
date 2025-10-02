@@ -23,7 +23,7 @@
     "express",
     "swagger"
   ],
-  "author": "FAB-PRO",
+  "author": "Vinícius Schneider",
   "license": "MIT",
   "dependencies": {
     "@types/qrcode-terminal": "^0.12.2",
@@ -69,11 +69,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/FAB-PRO/zap-api-venom.git"
+    "url": "https://github.com/vnschneider/mariflow-api.git"
   },
   "bugs": {
-    "url": "https://github.com/FAB-PRO/zap-api-venom/issues"
+    "url": "https://github.com/vnschneider/mariflow-api/issues"
   },
-  "homepage": "https://github.com/FAB-PRO/zap-api-venom#readme",
+  "homepage": "https://github.com/vnschneider/mariflow-api#readme",
   "packageManager": "yarn@4.10.3"
 }
